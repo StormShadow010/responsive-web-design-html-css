@@ -231,3 +231,64 @@ h3 {
     grid-column: 2/4;
   }
 }
+
+/** Modelos **/
+.modelo {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  margin-bottom: 5rem;
+}
+.modelo:last-child {
+  margin-bottom: 0rem;
+}
+
+.contenido-modelo {
+  padding: 2rem;
+  background-color: var(--blanco);
+}
+
+.basico {
+  background-image: url("../img/modelo_basico.jpg");
+}
+
+.premier {
+  background-image: url("../img/modelo_premier.jpg");
+}
+
+.elite {
+  background-image: url("../img/modelo_elite.jpg");
+}
+
+@media (min-width: 768px) {
+  .modelo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .basico {
+    background-position: top right;
+  }
+
+  .basico .contenido-modelo {
+    grid-row: 2/3;
+    padding: 2rem 2rem 2rem 0rem;
+  }
+
+  .premier {
+    background-position: top left;
+  }
+
+  .premier .contenido-modelo {
+    grid-column: 2/3;
+    padding: 2rem;
+  }
+
+  .elite {
+    background-position: top right;
+  }
+
+  .elite .contenido-modelo {
+    padding: 2rem 2rem 2rem 0rem;
+  }
+}
