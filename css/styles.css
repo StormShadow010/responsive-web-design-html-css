@@ -46,16 +46,18 @@ img {
 h1,
 h2 {
   font-weight: 900;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-size: 4.8rem;
 }
-
 h2 {
-  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-size: 5.8rem;
 }
-
+h3 {
+  font-size: 5rem;
+}
 /* ======================
    Utilidades
 ====================== */
@@ -63,6 +65,22 @@ h2 {
   max-width: 120rem;
   width: 90%;
   margin: 0 auto;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.btn {
+  color: var(--gris);
+  background-color: var(--blanco);
+  border: 1px solid var(--gris);
+  padding: 0.5rem 2rem;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: var(--gris);
+  color: var(--blanco);
 }
 
 /* ======================
@@ -183,5 +201,33 @@ h2 {
   }
   .eslogan h1 {
     font-size: 5rem;
+  }
+}
+
+/** Nosotros **/
+.nosotros {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url("../img//nosotros.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.contenido-nosotros {
+  background-color: var(--blanco);
+  padding: 2.5rem;
+}
+
+.contenido-nosotros h2,
+.contenido-nosotros p {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .nosotros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contenido-nosotros {
+    grid-column: 2/4;
   }
 }
